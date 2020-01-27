@@ -45,8 +45,8 @@ class GatorsMbkTracker extends LitElement {
 
   getMessage() {
     var messageText = this._hass.states[this.config.entity].attributes.message;
-    if (messageText.substring(0, 15) == "Florida Gators ") {
-      messageText = messageText.substring(15);
+    if (messageText.substring(0, 31) == "Florida Gators Men's Basketball") {
+      messageText = "MBK" + messageText.substring(31);
     }
     return `${messageText} (${this.getTV()})`;
   }
